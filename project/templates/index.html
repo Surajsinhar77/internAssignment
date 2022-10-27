@@ -10,30 +10,37 @@
     <body>
     <div class="container">
         <div class="header">
+            {% with messages = get_flashed_messages() %}  
+                    {% if messages %}  
+                        {% for message in messages %}  
+                            <p style="color: green;">{{ message }}</p>  
+                        {% endfor %}  
+                    {% endif %}  
+                {% endwith %}
             <h2 class="header4Contactus">Contact Us Page</h2>
             <a href="/showContactList" style="text-decoration: none; border: 1.5px solid grey; border-radius: 50px; padding: 5px 10px; background-color:  rgba(193, 191, 191, 0.708); margin-bottom: 20px;">Contact List Page</a>
         </div>
         <div class="formPart">
-            <form class="row g-3">
+            <form action="/contactSubmit" class="row g-3" method="POST">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" required/>
+                <input type="email" name="email" class="form-control" id="inputEmail4" required/>
             </div>
             <div class="col-md-6">
                 <label for="inputName4" class="form-label">Name</label>
-                <input type="name" class="form-control" id="inputName4" required/>
+                <input type="name" name="name" class="form-control" id="inputName4" required/>
             </div>
             <div class="col-12">
-                <label for="inputSubject" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputSubject" required/>
+                <label for="inputSubject" class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-control" id="inputSubject" required/>
             </div>
             <div class="col-12">
                 <label for="inputMessage" class="form-label">Message</label>
-                <textarea name="Message" class="form-control" id="inputMessage" cols="141" required></textarea>
+                <textarea name="message" class="form-control" id="inputMessage" cols="141" required></textarea>
             </div>
             <div class="col-md-12">
                 <label for="inputQuery" class="form-label">Query</label>
-                <textarea name="Query" type="text" class="form-control" id="inputQuery" cols="141" required></textarea>
+                <textarea name="query" type="text" class="form-control" id="inputQuery" cols="141" required></textarea>
             </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>

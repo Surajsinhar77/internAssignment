@@ -13,8 +13,9 @@
     </head>
     <body>
             <div class="container4signup">
+                
                 <h4 style="text-align: center;">Sign Up please</h4>
-                <form class="row g-3" id="signupform">
+                <form class="row g-3" id="signupform" action="/signuping" method="POST">
                     <div class="col-md-6">
                         <label for="inputName4" class="form-label">Name</label>
                         <input type="text" name="name" class="form-control" id="inputName4" required>
@@ -40,7 +41,7 @@
                     </div>
                     <div class="col-6">
                         <label for="inputDob" class="form-label">Gender</label>
-                        <select id="inputState" name="Gender" class="form-select" required>
+                        <select id="inputState" name="gender" class="form-select" required>
                             <option selected>Choose...</option>
                             <option>Male</option>
                             <option>Female</option>

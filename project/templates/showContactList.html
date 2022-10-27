@@ -18,37 +18,35 @@
             <div class="header">
                 <h2 class="header4Contactus">Contact List Page</h2>
                 <a href="/" style="text-decoration: none; border: 1.5px solid grey; border-radius: 50px; padding: 5px 10px; background-color:  rgba(193, 191, 191, 0.708); margin-bottom: 20px;">To go Contact us Page</a>
+                <a href="/signup" style="text-decoration: none; border: 1.5px solid grey; border-radius: 50px; padding: 5px 10px; background-color:  rgba(193, 191, 191, 0.708); margin-bottom: 20px;">SignUp</a>
             </div>
             <div class="table">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">Sno</th>
                             <th scope="col">Email</th>
                             <th scope="col">Name</th>
                             <th scope="col">Subject</th>
                             <th scope="col">Message</th>
                             <th scope="col">Query</th>
+                            <th scope="col">DateTime</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+
+                        {% for contactlist in contactlist %}
+                                <tr>
+                                    <th scope="row">{{contactlist.sno}}</th>
+                                    <td>{{contactlist.email}}</td>
+                                    <td>{{contactlist.name}}</td>
+                                    <td>{{contactlist.subject}}</td>
+                                    <td>{{contactlist.message}}</td>
+                                    <td>{{contactlist.qury}}</td>
+                                    <td>{{contactlist.datetime}}</td>
+                                </tr>
+                        {% endfor %}
+
                     </tbody>
                 </table>
             </div>
