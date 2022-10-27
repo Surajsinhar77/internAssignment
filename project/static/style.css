@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    margin: 0 auto;
+    font-size: small;
+}
+
+.container{
+    width: 75vw;
+}
+
+.header4Contactus{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header{
+    margin-bottom: 20px;
+}
+
+.container4signup{
+    width: 30vw;
+    border: 0.5px solid gray;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+/* .signUpBtn{
+    width: 100vh;
+} */
+
+.passwordmatching{
+    display:none;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
